@@ -2,16 +2,16 @@
 #include <stdio.h>
 
 double poww(double base, int exponent) {
-  // Handle special cases
+ 
   if (exponent == 0) {
-    return 1.0; // Anything to the power of 0 is 1 (except for 0^0)
+    return 1.0; 
   } else if (exponent < 0) {
-    return 1.0 / poww(base, -exponent); // Handle negative exponents
+    return 1.0 / poww(base, -exponent); 
   } else if (base == 0.0 && exponent > 0) {
-    return 0.0; // 0 to any positive power is 0
+    return 0.0; 
   }
 
-  // Recursive implementation
+ 
   return base * poww(base, exponent - 1);
 }
 size_t binary_tree_heighttmp(const binary_tree_t *tree)
