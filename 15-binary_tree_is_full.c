@@ -54,7 +54,7 @@ int binary_tree_is_full(const binary_tree_t *tree)
     fullnodes= poww(2,binary_tree_heighttmp(tree))-1;
     if ((int)binary_tree_sizetmp(tree)==fullnodes)
         return 1;
-    else
+    else if ((int)binary_tree_sizetmp(tree)>= (poww(2,n-1)-1))
     {
         if (tree->left && tree->right || (tree->left && !tree->right))
             return binary_tree_is_full(tree->left) && binary_tree_balance(tree->right);
